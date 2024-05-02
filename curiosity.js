@@ -8,7 +8,7 @@ import { getFresnelMat } from "./src/getFresnelMat.js";
 
 const w = 640;
 const h = 480;
-const roversSection = document.querySelector(".rovers");
+const roversSection = document.querySelector(".model_curiosity");
 let rover, roverGroup;
 
 
@@ -59,13 +59,13 @@ const animate = () => {
 
 
 
-function handleWindowResize () {
-    roverCamera.aspect = window.innerWidth / window.innerHeight;
-    roverCamera.fov = 20
-    roverCamera.updateProjectionMatrix();
-    roverRenderer.setSize(window.innerWidth, window.innerHeight);
-  }
-window.addEventListener('resize', handleWindowResize, false);
+// function handleWindowResize () {
+//     roverCamera.aspect = window.innerWidth / window.innerHeight;
+//     roverCamera.fov = 20
+//     roverCamera.updateProjectionMatrix();
+//     roverRenderer.setSize(window.innerWidth, window.innerHeight);
+//   }
+// window.addEventListener('resize', handleWindowResize, false);
 
 
 animate();

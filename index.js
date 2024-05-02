@@ -101,3 +101,20 @@ roverCamera.position.z = 6;
 const roverRenderer = new THREE.WebGLRenderer({ antialias: true });
 roverRenderer.setSize(w, h);
 containerStartPage.appendChild(renderer.domElement);
+
+
+// const textSpan = document.querySelector(".text");
+// const copyText = textSpan.textContent;
+// textSpan.textContent = '';
+
+// for(let i = 0; i < copyText.length; i++) {
+
+// }
+
+let typed = new Typed(".text_span", {
+  typeSpeed: 20,
+  backSpeed: 20,
+  startDelay: 500,
+  strings: ["Embark on an extraordinary journey to Mars and unlock the secrets <br> of the Red Planet's captivating landscapes and ancient mysteries"],
+  showCursor: false,
+})

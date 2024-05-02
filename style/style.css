@@ -99,13 +99,18 @@ canvas {
 
 .start_page_description {
     display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.start_page_description span {
+    display: flex;
     text-align: center;
     color: #b3b3b3;
     flex-direction: column;
     gap: 20px;
     font-family: "Oswald", sans-serif;
     letter-spacing: 3px;
-
 }
 
 .btns {
@@ -144,7 +149,7 @@ canvas {
 
 .rovers {
     height: 480px;
-    margin-top: 300px;
+    margin-top: 600px;
 }
 
 .rover {
@@ -287,6 +292,47 @@ canvas {
   animation-name: fade;
   animation-duration: 1.5s;
 }
+
+
+.curiosity_rover_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.model_curiosity {
+}
+
+.model_description {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 60%;
+  color: #fff;
+}
+
+.model_description h3 {
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 2px;
+  font-size: 40px;
+}
+
+.model_description p {
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 1px;
+  font-size: 25px;
+}
+
+
+.opportunity_rover_container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  margin-left: 50px;
+}
+
+.model_opportunity {
+}
+
 
 
 
