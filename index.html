@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Robot Bobby Earth</title>
+    <style>
+      body {
+        margin: 0;
+      }
+    </style>
+    <script type="importmap">
+			{
+				"imports": {
+					"three": "https://cdn.jsdelivr.net/npm/three@0.131.3/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.131.3/examples/jsm/"
+        }
+			}
+		</script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+          <img src="./images/Picture1.png" alt="">
+      </div>
+      <nav class="navbar">
+          <a href="">Home</a><a href="">Mars Weather</a><a href="mars_photos.html">Rovers</a><a href="">3D(наверное)</a>
+      </nav>
+  </header>
+
+  <main>
+      <section class="start-page">
+          <div class="container">
+            <div class="start_page_text">
+              <h3>PLANET</h3>
+              <p>MARS</p>
+              <div class="start_page_description">
+                <span>BECOME A MARTIAN</span>
+                <span>Embark on an extraordinary journey to Mars and unlock the secrets of the Red Planet's captivating landscapes and ancient mysteries</span>
+              </div>
+              <div class="btns">
+                <button class="btn start_page_btn">Rovers</button>
+                <button class="btn start_page_btn">Weather On Mars</button>
+              </div>
+            </div>
+          </div>
+      </section>
+
+      <section class="rovers">
+      </section>
+      <section class="rover">
+      </section>
+
+  </main>
+  <script type="module" src="opportunity.js"></script>
+  <script type="module" src="curiosity.js"></script>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
