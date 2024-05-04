@@ -114,7 +114,7 @@ containerStartPage.appendChild(renderer.domElement);
 let typed = new Typed(".text_span", {
   typeSpeed: 20,
   backSpeed: 20,
-  startDelay: 500,
+  startDelay: 200,
   strings: ["Embark on an extraordinary journey to Mars and unlock the secrets <br> of the Red Planet's captivating landscapes and ancient mysteries"],
   showCursor: false,
 })

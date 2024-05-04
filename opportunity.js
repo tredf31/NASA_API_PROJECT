@@ -50,7 +50,7 @@ roverRenderer.gammaOutput = true;
 
 const animate = () => {
     requestAnimationFrame(animate)
-    roverGroup.rotation.y += 0.0002
+    roverGroup.rotation.y += 0.008
     // controls.update();
     const time = Date.now() * 0.0005;
     const color5 = new THREE.Color( 'skyblue' );
@@ -67,16 +67,19 @@ const animate = () => {
 animate();
 
 
-let counter = 0;
-window.addEventListener("scroll", () => {
+const textAnimator = (textArr, typeSpeed, showCursor, startDelay) => {
+    let typed = new Typed(".opportunity_description_text", {
+        typeSpeed: typeSpeed,
+        startDelay: startDelay,
+        strings: textArr,
+        showCursor: showCursor,
+      })
+    return;
+}
 
-    if(window.scrollY > 670 && counter === 0) {
-        counter + 1;
-        let typed = new Typed(".opportunity_description_text", {
-            typeSpeed: 1,
-            startDelay: 500,
-            strings: ["Opportunity, also known as MER-B (Mars Exploration Rover – B) or MER-1, is a robotic rover that was active on Mars from 2004 until 2018. Opportunity was operational on Mars for 5111 sols (14 years, 138 days on Earth). Launched on July 7, 2003, as part of NASA's Mars Exploration Rover program, it landed in Meridiani Planum on January 25, 2004, three weeks after its twin, Spirit (MER-A), touched down on the other side of the planet. With a planned 90-sol duration of activity (slightly less than 92.5 Earth days), Spirit functioned until it got stuck in 2009 and ceased communications in 2010, while Opportunity was able to stay operational for 5111 sols after landing, maintaining its power and key systems through continual recharging of its batteries using solar power, and hibernating during events such as dust storms to save power. This careful operation allowed Opportunity to operate for 57 times its designed lifespan, exceeding the initial plan by 14 years, 47 days (in Earth time). By June 10, 2018, when it last contacted NASA, the rover had traveled a distance of 45.16 kilometers (28.06 miles)."],
-            showCursor: false,
-          })
-    } else return;
+window.addEventListener("scroll", function textDelay() {
+    if(window.scrollY > 600){
+    textAnimator(["Opportunity, also known as MER-B (Mars Exploration Rover – B) or MER-1, is a robotic rover that was active on Mars from 2004 until 2018. Opportunity was operational on Mars for 5111 sols (14 years, 138 days on Earth). Launched on July 7, 2003, as part of NASA's Mars Exploration Rover program, it landed in Meridiani Planum on January 25, 2004, three weeks after its twin, Spirit (MER-A), touched down on the other side of the planet. With a planned 90-sol duration of activity (slightly less than 92.5 Earth days), Spirit functioned until it got stuck in 2009 and ceased communications in 2010, while Opportunity was able to stay operational for 5111 sols after landing, maintaining its power and key systems through continual recharging of its batteries using solar power, and hibernating during events such as dust storms to save power. This careful operation allowed Opportunity to operate for 57 times its designed lifespan, exceeding the initial plan by 14 years, 47 days (in Earth time). By June 10, 2018, when it last contacted NASA, the rover had traveled a distance of 45.16 kilometers (28.06 miles)."], 5, false, 20);
+    removeEventListener("scroll", textDelay)
+    }
 })
