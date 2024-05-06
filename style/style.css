@@ -212,6 +212,7 @@ canvas {
 
 /* Slideshow container */
 .slideshow-container {
+  display: none;
   width: 40%;
   position: relative;
   margin: auto;

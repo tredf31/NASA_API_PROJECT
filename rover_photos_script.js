@@ -36,6 +36,7 @@ const getPhotos = async (roverName, solDate) => {
 
 let counterOfPictures = 0;
 const showPictures = async () => {
+  slideshowContainer.style.display = "block";
   counterOfPictures = 0;
   const allPhotos = document.querySelectorAll(".mySlides");
   allPhotos.forEach(item => item.remove())

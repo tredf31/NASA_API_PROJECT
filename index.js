@@ -74,6 +74,9 @@ function handleWindowResize () {
     earthGroup.position.x = -1;
     camera.fov = 30
   }
+  if(window.innerWidth < 400) {
+    renderer.setSize(400, 700)
+  }
 }
 window.addEventListener('resize', handleWindowResize, false);
 

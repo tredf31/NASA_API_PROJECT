@@ -66,7 +66,11 @@ const animate = () => {
 //     roverCamera.updateProjectionMatrix();
 //     roverRenderer.setSize(window.innerWidth, window.innerHeight);
 //   }
-// window.addEventListener('resize', handleWindowResize, false);
+window.addEventListener('resize', () => {
+    if(window.innerWidth < 400){
+        roverRenderer.setSize(400, 480)
+    }
+}, false);
 
 
 animate();
