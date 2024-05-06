@@ -12,25 +12,23 @@
             <img src="./images/Picture1.png" alt="">
         </div>
         <nav class="navbar">
-            <a href="">Home</a><a href="">Mars Weather</a><a href="mars_photos.html">Rovers</a><a href="">3D(наверное)</a>
+            <a href="index.html">Home</a><a href="mars_photos.html">Rovers</a><a href="model_review_page.html">3D</a>
         </nav>
     </header>
 
     <main>
         <section class="photos">
-            <div class="select_rover"></div>
-            <select class="dropdown" value="gavno">
-                <option value="curiosity">Curiosity</option>
-                <option value="opportunity">Opporunity</option>
-                <option value="perseverance">Perseverance</option>
-            </select>
-            <input class="date-input" type="date" max="2020-01-01">
-            <button class="get_photos">Get Photos</button>
+            <div class="form_select_photo">
+                <select class="dropdown" value="gavno">
+                    <option value="curiosity">Curiosity</option>
+                    <option value="opportunity">Opporunity</option>
+                    <option value="perseverance">Perseverance</option>
+                </select>
+                <input class="date-input" type="date" max="2020-01-01">
+                <button class="get_photos">Get Photos</button>
+            </div>
             <div class="select_sol"></div>
             <div class="slideshow-container">
-
-                <div class="mySlides fade">
-                  </div>
               
                 <!-- Next and previous buttons -->
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -39,7 +37,7 @@
               <br>
               
               <!-- The dots/circles -->
-              <div style="text-align:center">
+              <div class="dots" style="text-align:center">
                 <span class="dot" onclick="currentSlide(1)"></span>
                 <span class="dot" onclick="currentSlide(2)"></span>
                 <span class="dot" onclick="currentSlide(3)"></span>

@@ -20,16 +20,19 @@
             <img src="./images/Picture1.png" alt="">
         </div>
         <nav class="navbar">
-            <a href="">Home</a><a href="">Mars Weather</a><a href="mars_photos.html">Rovers</a><a href="model_review_page.html">3D(наверное)</a>
+            <a href="index.html">Home</a><a href="mars_photos.html">Rovers</a><a href="model_review_page.html">3D</a>
         </nav>
     </header>
     
     <main>
-        <div class="select_model_bar"></div>
+        <select class="model_dropdown">
+            <option value="curiosity">curiosity</option>
+            <option value="opportunity">opportunity</option>
+            <option value="mars">mars</option>
+        </select>
         <section class="model_canvas"></section>
     </main>
 
-    <script type="module" src="curiosity_full.js"></script>
     <script type="module" src="opportunity_full.js"></script>
 </body>
 </html>

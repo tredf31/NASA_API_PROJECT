@@ -36,16 +36,19 @@ const getPhotos = async (roverName, solDate) => {
 
 let counterOfPictures = 0;
 const showPictures = async () => {
+  counterOfPictures = 0;
+  const allPhotos = document.querySelectorAll(".mySlides");
+  allPhotos.forEach(item => item.remove())
     let solDate = daysBetweenDates("2018-01-01", dateInput.value); 
     console.log(dateInput.value);
     const photosData = await getPhotos(selectRover.value, solDate);
     photosData["photos"].forEach(item => {
         counterOfPictures += 1
-        slideshowContainer.insertAdjacentHTML("afterbegin", `
+        slideshowContainer.insertAdjacentHTML("beforeend", `
         <div class="mySlides">
             <div class="numbertext">${counterOfPictures} / ${photosData["photos"].length}</div>
-            <img src="${item.img_src}" style="width:100%">
-            <div class="text">Caption Text</div>
+            <img src="${item.img_src}" onerror="this.src='./images/erorr1.png'" style="width:100%">
+            <div class="text">Sol: ${item.sol}, Camera name: ${item.camera.full_name}</div>
         </div>
         `)
     })

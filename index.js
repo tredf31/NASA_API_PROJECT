@@ -38,6 +38,7 @@ const earthMesh = new THREE.Mesh(geometry, material);
 earthGroup.add(earthMesh);
 
 
+
 camera.fov = 20
 camera.updateProjectionMatrix();
 
@@ -50,7 +51,6 @@ scene.add(sunLight);
 earthMesh.position.x = 1;
 earthMesh.position.y = 0.7;
 earthMesh.position.z = -2;
-
 function animate() {
   requestAnimationFrame(animate);
   earthMesh.rotation.y += 0.002;
@@ -60,16 +60,20 @@ function animate() {
 
 window.addEventListener("scroll", (e) => {
   console.log(window.scrollY);
-
+  
 })
 
 animate();
 
 function handleWindowResize () {
   camera.aspect = window.innerWidth / window.innerHeight;
-  camera.fov = 20
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
+  if(window.innerWidth < 1040) {
+
+    earthGroup.position.x = -1;
+    camera.fov = 30
+  }
 }
 window.addEventListener('resize', handleWindowResize, false);
 
@@ -114,7 +118,7 @@ containerStartPage.appendChild(renderer.domElement);
 let typed = new Typed(".text_span", {
   typeSpeed: 20,
   backSpeed: 20,
-  startDelay: 200,
+  startDelay: 100,
   strings: ["Embark on an extraordinary journey to Mars and unlock the secrets <br> of the Red Planet's captivating landscapes and ancient mysteries"],
   showCursor: false,
 })
